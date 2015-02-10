@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>SPSSUpload</title>
+</head>
+<body>
+
+	
+	<div>
+	 <form id="fileupload" name="fileupload" enctype="multipart/form-data" method="post">
+		  <fieldset>
+		    <input type="file" name="fileselect" id="fileselect"></input>
+		    <input id="uploadbutton" type="button" value="Upload to Parse"/>
+		  </fieldset>
+	</form>
+	</div>
+	
+	<div>
+	<form action="http://localhost:7654/Filesapis2db/SPSSUpload" method="post" enctype="multipart/form-data">
+      <p>
+        Select a file : <input type="file" name="file" size="50" />
+       </p>
+       <input type="submit" value="Upload It" />
+    </form>
+	
+	</div>
+
+    <script type="text/javascript" src="javascripts/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascripts/knockout-3.2.0.js"></script>
+    <script type="text/javascript" src="javascripts/SPSSUpload.js"></script>
+</body>
+</html>
