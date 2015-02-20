@@ -8,7 +8,7 @@
 
 	
 	<div>
-	 <form id="fileupload" name="fileupload" enctype="multipart/form-data" method="post">
+<!-- 	 <form id="fileupload" name="fileupload" enctype="multipart/form-data" method="post">
 		  <fieldset>
 		    <input type="file" name="fileselect" id="fileselect"></input>
 		    <input id="uploadbutton" type="button" value="Upload to Parse"/>
@@ -22,7 +22,19 @@
         Select a file : <input type="file" name="file" size="50" />
        </p>
        <input type="submit" value="Upload It" />
-    </form>
+    </form> -->
+	
+	<h1>File Upload with Jersey</h1>
+ 
+	<form action="http://localhost:7654/Filesapis2db/HelloFilesapis2db" method="post" enctype="multipart/form-data">
+ 
+	   <p>
+		Select a file : <input type="file" name="file" size="45" />
+	   </p>
+ 
+	   <input type="submit" value="Upload It" />
+	</form>
+	
 	
 	</div>
 
