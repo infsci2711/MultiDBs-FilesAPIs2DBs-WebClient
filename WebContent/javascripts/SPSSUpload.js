@@ -1,7 +1,7 @@
 /**
  * 
  */
-var restBaseUrl = "http://localhost:7654/";
+var restBaseUrl = "http://52.0.188.59/";
 $(function() {
     var file;
 
