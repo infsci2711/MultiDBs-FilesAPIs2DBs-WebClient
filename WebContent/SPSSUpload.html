@@ -1,46 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>SPSSUpload</title>
-</head>
-<body>
+    <head>
+        <meta charset="ISO-8859-1">
+        <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/spssUpload.css" />
+        <title>SPSSUpload</title>
+    </head>
+    <body>
 
-	
-	<div>
-<!-- 	 <form id="fileupload" name="fileupload" enctype="multipart/form-data" method="post">
-		  <fieldset>
-		    <input type="file" name="fileselect" id="fileselect"></input>
-		    <input id="uploadbutton" type="button" value="Upload to Parse"/>
-		  </fieldset>
-	</form>
-	</div>
-	
-	<div>
-	<form action="http://localhost:7654/Filesapis2db/SPSSUpload" method="post" enctype="multipart/form-data">
-      <p>
-        Select a file : <input type="file" name="file" size="50" />
-       </p>
-       <input type="submit" value="Upload It" />
-    </form> -->
-	
-	<h1>File Upload with Jersey</h1>
- 
-	<form action="http://localhost:7654/Filesapis2db/SPSSUpload" method="post" enctype="multipart/form-data">
- 
-	   <p>
-		Select a file : <input type="file" name="file" size="45" />
-	   </p>
- 
-	   <input type="submit" value="Upload It" />
-	</form>
-	
-	
-	</div>
 
-    <script type="text/javascript" src="javascripts/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="javascripts/knockout-3.2.0.js"></script>
-    <script type="text/javascript" src="javascripts/SPSSUpload.js"></script>
-</body>
+        
+            <!-- 	 <form id="fileupload" name="fileupload" enctype="multipart/form-data" method="post">
+                              <fieldset>
+                                <input type="file" name="fileselect" id="fileselect"></input>
+                                <input id="uploadbutton" type="button" value="Upload to Parse"/>
+                              </fieldset>
+                    </form>
+                    </div>
+                    
+                    <div>
+                    <form action="http://localhost:7654/Filesapis2db/SPSSUpload" method="post" enctype="multipart/form-data">
+                  <p>
+                    Select a file : <input type="file" name="file" size="50" />
+                   </p>
+                   <input type="submit" value="Upload It" />
+                </form> -->
+            <div id="container">
+            <div class="robot1"></div>	
+            <div class="title"><h1>File Upload with Jersey</h1></div>
+            <div class="form">
+                <form action="http://localhost:7654/Filesapis2db/SPSSUpload" method="post" enctype="multipart/form-data">
+
+                    <p>
+                        Select a file :</p>
+                    <p><input type="file" name="file" size="55" />
+                    
+
+                    <input type="submit" value="Upload It" /></p>
+                </form>
+            </div>
+
+            </div>
+
+        <script type="text/javascript" src="javascripts/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
+        <script type="text/javascript" src="javascripts/knockout-3.2.0.js"></script>
+        <script type="text/javascript" src="javascripts/SPSSUpload.js"></script>
+    </body>
 </html>
