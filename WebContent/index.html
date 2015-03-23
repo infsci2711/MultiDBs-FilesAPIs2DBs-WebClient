@@ -1,69 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>INFSCI 2711 Web Tutorial</title>
+    <head>
+        <meta charset="ISO-8859-1">
+        <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/spssUpload.css" />
+        <title>SPSSUpload</title>
+    </head>
+    <body>
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-</head>
-<body style="margin: 60px;">
-	<div class="row">
 
-		<div class="col-md-12">
+        
+            <!-- 	 <form id="fileupload" name="fileupload" enctype="multipart/form-data" method="post">
+                              <fieldset>
+                                <input type="file" name="fileselect" id="fileselect"></input>
+                                <input id="uploadbutton" type="button" value="Upload to Parse"/>
+                              </fieldset>
+                    </form>
+                    </div>
+                    
+                    <div>
+                    <form action="http://localhost:7654/Filesapis2db/SPSSUpload" method="post" enctype="multipart/form-data">
+                  <p>
+                    Select a file : <input type="file" name="file" size="50" />
+                   </p>
+                   <input type="submit" value="Upload It" />
+                </form> -->
+            <div id="container">
+            <div class="robot1"></div>	
+            <div class="title"><h1>File Upload with Jersey</h1></div>
+            <div class="form">
+                <form action="http://localhost:7654/Filesapis2db/SPSSUpload" method="post" enctype="multipart/form-data">
 
-			<div class="page-header">
-			  <h1>This is INFSCI 2711 Tutorial on Web Applicaiton with RESTful API <br/><small>(with twitter bootstrap and knockouy.js)</small></h1>
-			</div>
+                    <p>
+                        Select a file :</p>
+                    <p><input type="file" name="file" size="55" />
+                    
 
-			<div id="personsContainer">
-				<h3>
-		        	There are <span data-bind="text: people().length"></span> persons in our databases.
-		        	<button class="btn btn-default" data-bind="click: findAll">Refresh</button>
-		    	</h3> 
+                    <input type="submit" value="Upload It" /></p>
+                </form>
+            </div>
 
-		    	<form class="form-inline">
-					<!-- ko with: newPerson -->
+            </div>
 
-					<input class="form-control" placeholder="Enter first name" data-bind="textInput: firstName">
-					<input class="form-control" placeholder="Enter last name" data-bind="textInput: lastName">
-
-					<!-- /ko -->
-
-					<button type="submit" class="btn btn-default" data-bind="click: addPerson">Add Person</button>
-				</form>
-
-		    	<!-- ko if: people().length > 0 -->
-
-		    	<table class="table table-striped table-hover">
-		            <thead>
-		                <tr>  
-		                	<th>#</th>
-		                    <th>First Name</th>
-		                    <th>Last Name</th>                         
-		                </tr> 
-		            </thead> 
-		            <tbody data-bind="foreach: people">
-		                <tr>  
-		                	<td data-bind="text: $index"></td> 
-		                    <td data-bind="text: firstName"></td>  
-		                    <td data-bind="text: lastName"></td>
-		                </tr>     
-		            </tbody>
-		        </table>  
-
-		        <!-- /ko -->
-
-			</div>
-
-		</div>
-
-	</div>
-
-	
-    <script type="text/javascript" src="javascripts/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="javascripts/knockout-3.2.0.js"></script>
-    <script type="text/javascript" src="javascripts/knockout_models/personViewModel.js"></script>
-</body>
+        <script type="text/javascript" src="javascripts/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
+        <script type="text/javascript" src="javascripts/knockout-3.2.0.js"></script>
+        <script type="text/javascript" src="javascripts/SPSSUpload.js"></script>
+    </body>
 </html>
