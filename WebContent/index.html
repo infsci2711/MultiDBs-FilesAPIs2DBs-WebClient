@@ -30,7 +30,7 @@
             <div class="robot1"></div>	
             <div class="title"><h1>File Upload with Jersey</h1></div>
             <div class="form">
-                <form action="http://52.0.188.59:7654/Filesapis2db/SPSSUpload" method="post" enctype="multipart/form-data">
+                <form action="http://localhost:7654/Filesapis2db/SPSSUpload" method="post" enctype="multipart/form-data">
 
                     <p>
                         Select a file :</p>
@@ -41,18 +41,34 @@
                 </form>
             </div>
             
-            <div class="search">
-                <form action="http://52.0.188.59:7654/dataverse" method="post" enctype="multipart/form-data">
-
-                    <p>
-                        Enter a file name:</p>
-                    <p><input type="text" name="file_name" size="55" />
-                 <input type="submit" value="Search It" /></p>
-                </form>
-            </div>
+            
             
 
             </div>
+            <div class="search">
+                    <p>
+                        Enter a file name:</p>
+                    <p><input id="dataverseFile" type="text" name="file_name" size="55" />
+                 <button onclick="sendRequest()">Send</button>
+            </div>
+            <div id="testDiv">www</div>
+            <script>
+			function sendRequest() {
+				$.ajax({
+					url: "http://localhost:7654/dataverse/dataverseName/"+$("#dataverseFile").val(),
+					type: 'POST',
+					dataType: 'json',
+					contentType: "application/json",
+					crossDomain: true,
+					success: function(data) {
+						alert("Download Dataset Success!");
+					},
+					error: function(data) {
+						alert("Something went wrong while getting services' list. Please try again.");
+					}
+				});
+			}
+			</script>
 
         <script type="text/javascript" src="javascripts/jquery-1.11.2.min.js"></script>
         <script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
