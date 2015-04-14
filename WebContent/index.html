@@ -38,20 +38,18 @@
                     
 
                     <input type="submit" value="Upload It" /></p>
+                   
                 </form>
-            </div>
-            
-            
-            
-
-            </div>
-            <div class="search">
-                    <p>
+                <div class="search">
+                     <p>
                         Enter a file name:</p>
                     <p><input id="dataverseFile" type="text" name="file_name" size="55" />
-                 <button onclick="sendRequest()">Send</button>
+                 <button id="send" onclick="sendRequest()">Send</button>
             </div>
-            <div id="testDiv">www</div>
+            </div>
+            </div>
+            
+            
             <script>
 			function sendRequest() {
 				$.ajax({
