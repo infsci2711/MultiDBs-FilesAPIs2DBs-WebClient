@@ -44,6 +44,9 @@
                      <p>
                         Enter a file name:</p>
                     <p><input id="dataverseFile" type="text" name="file_name" size="55" />
+                    <p>
+                        Enter the Dataverse:</p>
+                    <p><input id="dataverseName" type="text" name="dataverse_name" size="55" />
                  <button id="send" onclick="sendRequest()">Send</button>
             </div>
             </div>
@@ -53,7 +56,8 @@
             <script>
 			function sendRequest() {
 				$.ajax({
-					url: "http://52.0.188.59:7654/Filesapis2db/DataverseName/"+$("#dataverseFile").val(),
+				//	url: "http://52.0.188.59:7654/Filesapis2db/DataverseName/"+$("#dataverseFile").val(),
+			    	url: "http://52.0.188.59:7654/Filesapis2db/DataverseName/"+$("#dataverseFile").val()+"/"+$("#dataverseName").val(),
 					type: 'POST',
 					dataType: 'json',
 					contentType: "application/json",
