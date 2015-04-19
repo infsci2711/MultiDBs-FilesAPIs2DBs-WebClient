@@ -30,7 +30,7 @@
             <div class="robot1"></div>	
             <div class="title"><h1>File Upload with Jersey</h1></div>
             <div class="form">
-                <form action="http://52.0.188.59:7654/Filesapis2db/SPSSUpload" method="post" enctype="multipart/form-data">
+                <form id="spss_form" action="" method="post" enctype="multipart/form-data">
 
                     <p>
                         Select a file :</p>
@@ -53,11 +53,18 @@
             </div>
             
             
+        <script type="text/javascript" src="javascripts/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
+        <script type="text/javascript" src="javascripts/knockout-3.2.0.js"></script>
+        <script type="text/javascript" src="javascripts/SPSSUpload.js"></script>
+            
             <script>
+            $('#spss_form').attr('action', restBaseUrl+'Filesapis2db/SPSSUpload');
+            
 			function sendRequest() {
 				$.ajax({
 				//	url: "http://52.0.188.59:7654/Filesapis2db/DataverseName/"+$("#dataverseFile").val(),
-			    	url: "http://52.0.188.59:7654/Filesapis2db/DataverseName/"+$("#dataverseFile").val()+"/"+$("#dataverseName").val(),
+			    	url: restBaseUrl+"Filesapis2db/DataverseName/"+$("#dataverseFile").val()+"/"+$("#dataverseName").val(),
 					type: 'POST',
 					dataType: 'json',
 					contentType: "application/json",
@@ -72,9 +79,6 @@
 			}
 			</script>
 
-        <script type="text/javascript" src="javascripts/jquery-1.11.2.min.js"></script>
-        <script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
-        <script type="text/javascript" src="javascripts/knockout-3.2.0.js"></script>
-        <script type="text/javascript" src="javascripts/SPSSUpload.js"></script>
+        
     </body>
 </html>
